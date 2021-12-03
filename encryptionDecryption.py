@@ -92,8 +92,13 @@ def reset():
 root = tk.Tk()
 # set window size
 root.geometry("400x400")
+# set minimum window size value
+root.minsize(400, 400)
+# set maximum window size value
+root.maxsize(400, 400)
 # set window title
 root.title("Ciphertext")
+
 
 # static label that tells user to input text
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
