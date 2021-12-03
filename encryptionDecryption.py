@@ -28,8 +28,8 @@ label1.config(font=("calibri",12))
 label1.place(x=10, y=200)
 
 # widget allows user to input text
-user_entry = tk.Entry (root)
-user_entry.config()
-user_entry.pack(pady=10)
+user_text = tk.Entry (root)
+user_text.config()
+user_text.pack(pady=10)
 
 root.mainloop()
