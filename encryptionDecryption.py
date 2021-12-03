@@ -87,6 +87,10 @@ def reset():
     user_text.delete("1.0", "end")
     user_pass.delete("0", "end")
 
+def copy():
+    """ Copys inputed text to clipboard when copy button is clicked """
+    ### TODO
+
 # MAIN SCREEN
 
 root = tk.Tk()
