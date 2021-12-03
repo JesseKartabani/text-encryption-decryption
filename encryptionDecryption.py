@@ -1,7 +1,7 @@
 # A simple tkinter window
 import tkinter as tk
 from tkinter import ttk
-from tkinter.constants import GROOVE
+from tkinter.constants import GROOVE, WORD
 
 # -- Windows only configuration --
 try:
@@ -32,5 +32,10 @@ label1.place(x=10, y=200)
 user_pass = tk.Entry (root)
 user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
 user_pass.place(x=28, y=225)
+
+# widget allows user to input their text
+user_text = tk.Text (root, wrap=WORD)
+user_text.config(font="calibri 13", background="white", relief=GROOVE, bd=0)
+user_text.place(x=24, y=50, width=355, height=100)
 
 root.mainloop()
