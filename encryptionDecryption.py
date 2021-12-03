@@ -1,7 +1,7 @@
 import base64
 import os
 import tkinter as tk
-from tkinter import Button, Label, Text, Toplevel, ttk, font, messagebox
+from tkinter import Button, Label, PhotoImage, Text, Toplevel, ttk, font, messagebox
 from tkinter.constants import END, GROOVE, WORD
 
 # -- Windows only configuration --
@@ -88,6 +88,7 @@ def reset():
     user_text.delete("1.0", "end")
     user_pass.delete("0", "end")
 
+# MAIN SCREEN
 
 root = tk.Tk()
 # set window size
@@ -98,6 +99,10 @@ root.minsize(400, 400)
 root.maxsize(400, 400)
 # set window title
 root.title("Ciphertext")
+
+# set window icon
+image_icon = PhotoImage(file="keys.png")
+root.iconphoto(False, image_icon)
 
 
 # static label that tells user to input text
