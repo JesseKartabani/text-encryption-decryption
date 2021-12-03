@@ -48,7 +48,7 @@ Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, comma
 
 # displays RESET button
 # 1. button calls reset function on click
-Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command="").place(x=-15, y=325)
+Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command="").place(x=-15, y=330)
 
 
 root.mainloop()
