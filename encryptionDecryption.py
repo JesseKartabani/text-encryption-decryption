@@ -1,5 +1,4 @@
 import base64
-import os
 import tkinter as tk
 from tkinter import Button, Label, PhotoImage, Text, Toplevel, ttk, font, messagebox
 from tkinter.constants import END, GROOVE, WORD
@@ -131,6 +130,10 @@ Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, comma
 # displays RESET button
 # 1. button calls reset function on click
 Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command=reset).place(x=-15, y=330)
+
+# displays a copy to clipboard button
+# 1. button calls copy function on click
+
 
 
 root.mainloop()
