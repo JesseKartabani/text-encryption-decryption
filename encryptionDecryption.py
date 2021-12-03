@@ -1,6 +1,6 @@
 # A simple tkinter window
 import tkinter as tk
-from tkinter import ttk
+from tkinter import Button, ttk
 from tkinter.constants import GROOVE, WORD
 
 # -- Windows only configuration --
@@ -37,5 +37,9 @@ user_pass.place(x=28, y=225)
 user_text = tk.Text (root, wrap=WORD)
 user_text.config(font="calibri 13", background="white", relief=GROOVE, bd=0)
 user_text.place(x=24, y=50, width=355, height=100)
+
+# displats ENCRYPT button
+# 1. button calls encrypt function on click
+Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command="").place(x=10, y=280)
 
 root.mainloop()
