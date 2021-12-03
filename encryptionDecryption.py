@@ -46,6 +46,10 @@ def encrypt():
     # displays error message when password field is empty
     elif password == "":
         messagebox.showerror("Encryption", "Input Password")
+    # displays error message when password is incorrect
+    else:
+        messagebox.showerror("Encryption", "Invalid Password")
+        
     
 
 def reset():
