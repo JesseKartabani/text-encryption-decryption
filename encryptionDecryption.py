@@ -17,8 +17,8 @@ root.geometry("375x398")
 # set window title
 root.title("Title Here")
 
-label = ttk.Label(root, padding=10, text="Tkinter Window")
-label.config(font=("Robote",20))
+label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
+label.config(font=("calbri",13))
 label.pack()
 
 root.mainloop()
