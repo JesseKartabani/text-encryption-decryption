@@ -29,8 +29,8 @@ label1.config(font=("calibri",12))
 label1.place(x=10, y=200)
 
 # widget allows user to input their text
-user_text = tk.Entry (root)
-user_text.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
-user_text.pack(pady=10)
+user_pass = tk.Entry (root)
+user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
+user_pass.pack(pady=10)
 
 root.mainloop()
