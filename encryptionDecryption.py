@@ -13,12 +13,12 @@ except:
 
 root = tk.Tk()
 # set window size
-root.geometry("375x398")
+root.geometry("400x400")
 # set window title
 root.title("Title Here")
 
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
-label.config(font=("calbri",13))
+label.config(font=("calbri",13), foreground="black")
 label.pack()
 
 root.mainloop()
