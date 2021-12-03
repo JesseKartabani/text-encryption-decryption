@@ -12,11 +12,11 @@ except:
 
 
 root = tk.Tk()
-root.geometry("640x200")
+root.geometry("375x398")
 root.title("Title Here")
 
 label = ttk.Label(root, padding=10, text="Tkinter Window")
-label.config(font=("Comic Sans MS",40))
+label.config(font=("Robote",20))
 label.pack()
 
 root.mainloop()
