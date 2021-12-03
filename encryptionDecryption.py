@@ -23,6 +23,7 @@ def reset():
     """ Removes all user inputed text """
 
     user_text.delete("1.0", "end")
+    user_pass.delete("0", "end")
 
     
 
