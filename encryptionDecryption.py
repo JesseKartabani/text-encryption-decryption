@@ -100,11 +100,6 @@ root.maxsize(400, 400)
 # set window title
 root.title("Ciphertext")
 
-# set window icon
-image_icon = PhotoImage(file="keys.png")
-root.iconphoto(False, image_icon)
-
-
 # static label that tells user to input text
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
 label.config(font=("calbri",13), foreground="black",)
