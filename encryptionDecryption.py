@@ -40,12 +40,11 @@ user_text.place(x=24, y=50, width=355, height=100)
 
 # displats ENCRYPT button
 # 1. button calls encrypt function on click
-Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command="").place(x=10, y=280)
+Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command="").place(x=25, y=280)
 
 # displats DECRYPT button
 # 1. button calls decrypt function on click
 Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, command="").place(x=200, y=280)
-
 
 
 root.mainloop()
