@@ -27,7 +27,7 @@ root = tk.Tk()
 # set window size
 root.geometry("400x400")
 # set window title
-root.title("Title Here")
+root.title("Ciphertext")
 
 # static label that tells user to input text
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
