@@ -1,8 +1,7 @@
 import base64
 import os
 import tkinter as tk
-from tkinter import Button, Label, Text, Toplevel, ttk
-from tkinter import font
+from tkinter import Button, Label, Text, Toplevel, ttk, font, messagebox
 from tkinter.constants import END, GROOVE, WORD
 
 # -- Windows only configuration --
@@ -44,6 +43,9 @@ def encrypt():
 
         # displays the actual encrytped text
         text1.insert(END, encrypt)
+    # displays error message when password field is empty
+    elif password == "":
+        messagebox.showerror("Encryption", "Input Password")
     
 
 def reset():
