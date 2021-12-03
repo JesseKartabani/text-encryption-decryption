@@ -1,6 +1,6 @@
 # A simple tkinter window
 import tkinter as tk
-from tkinter import Button, Text, ttk
+from tkinter import Button, Text, Toplevel, ttk
 from tkinter.constants import GROOVE, WORD
 
 # -- Windows only configuration --
@@ -17,10 +17,17 @@ def decrypt():
 
 def encrypt():
     """"""
-    return None
+
+    password = user_pass.get()
+    # checks password is correct
+    if password == "1234":
+        root1 = Toplevel(root)        # creates new window
+        root1.title("Encryption")     # sets window title
+        root1.geometry("400x200")     # sets window size
+        root1.configure(bg="#ed3833") # sets window background color
 
 def reset():
-    """ Removes all user inputed text """
+    """ Removes all user inputed text when reset button is clicked """
 
     user_text.delete("1.0", "end")
     user_pass.delete("0", "end")
@@ -54,7 +61,7 @@ user_text.place(x=24, y=50, width=355, height=100)
 
 # displays ENCRYPT button
 # 1. button calls encrypt function on click
-Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command="").place(x=25, y=280)
+Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command=encrypt).place(x=25, y=280)
 
 # displays DECRYPT button
 # 1. button calls decrypt function on click
