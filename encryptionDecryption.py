@@ -31,6 +31,6 @@ label1.place(x=10, y=200)
 # widget allows user to input their password
 user_pass = tk.Entry (root)
 user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
-user_pass.pack(pady=10)
+user_pass.place(x=28, y=225)
 
 root.mainloop()
