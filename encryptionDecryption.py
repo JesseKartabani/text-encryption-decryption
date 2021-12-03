@@ -1,7 +1,9 @@
-# A simple tkinter window
+import base64
+import os
 import tkinter as tk
-from tkinter import Button, Text, Toplevel, ttk
-from tkinter.constants import GROOVE, WORD
+from tkinter import Button, Label, Text, Toplevel, ttk
+from tkinter import font
+from tkinter.constants import END, GROOVE, WORD
 
 # -- Windows only configuration --
 try:
@@ -25,6 +27,24 @@ def encrypt():
         root1.title("Encryption")     # sets window title
         root1.geometry("400x200")     # sets window size
         root1.configure(bg="#ed3833") # sets window background color
+
+        message = user_text.get(1.0, "end") # stores user input
+
+        # encodes message
+        encode_message = message.encode("ascii") 
+        base64_bytes = base64.b64encode(encode_message)
+        encrypt = base64_bytes.decode("ascii")
+
+        # displays ENCRYTED in the top left
+        Label(root1, text="ENCRYPTED", font="arial", fg="white", bg="#ed3833").place(x=10, y=0)
+
+        # displays empty text box
+        text1 = Text(root1, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
+        text1.place(x=10, y=40, width= 380, height=150)
+
+        # displays the actual encrytped text
+        text1.insert(END, encrypt)
+    
 
 def reset():
     """ Removes all user inputed text when reset button is clicked """
