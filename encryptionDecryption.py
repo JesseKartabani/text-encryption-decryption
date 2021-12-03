@@ -1,7 +1,6 @@
 # A simple tkinter window
 import tkinter as tk
 from tkinter import ttk
-from tkinter import font
 
 # -- Windows only configuration --
 try:
@@ -14,18 +13,18 @@ except:
 
 root = tk.Tk()
 # set window size
-root.geometry("375x398")
+root.geometry("400x400")
 # set window title
 root.title("Title Here")
 
 # static label
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
-label.config(font=("calbri",13), foreground="black")
+label.config(font=("calbri",13), foreground="black",)
 label.pack()
 
 label1 = ttk.Label(root, text="Enter secret key for encryption and decryption")
-label1.config(font=("calibri",13))
-label1.place(x=10, y=170)
+label1.config(font=("calibri",12))
+label1.pack()
 
 # widget allows user to input text
 user_entry = tk.Entry (root)
