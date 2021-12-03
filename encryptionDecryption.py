@@ -13,11 +13,41 @@ except:
 # -- End Windows only configuration --
 
 def decrypt():
-    """"""
-    return None
+    """ Decrypts user inputed text using base64 and displays it in a new window"""
+
+    password = user_pass.get()
+    # checks password is correct
+    if password == "1234":
+        root2 = Toplevel(root)        # creates new window
+        root2.title("Decryption")     # sets window title
+        root2.geometry("400x200")     # sets window size
+        root2.configure(bg="#00bd56") # sets window background color
+
+        message = user_text.get(1.0, "end") # stores user input
+
+        # Decrypts message
+        decode_message = message.encode("ascii") 
+        base64_bytes = base64.b64decode(decode_message)
+        decrypt = base64_bytes.decode("ascii")
+
+        # displays DECRYTED in the top left
+        Label(root2, text="DECRYPTED", font="arial", fg="white", bg="#00bd56").place(x=10, y=0)
+
+        # displays empty text box
+        text1 = Text(root2, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
+        text1.place(x=10, y=40, width= 380, height=150)
+
+        # displays the actual decrytped text
+        text1.insert(END, decrypt)
+    # displays error message when password field is empty
+    elif password == "":
+        messagebox.showerror("Encryption", "Input Password")
+    # displays error message when password is incorrect
+    else:
+        messagebox.showerror("Encryption", "Invalid Password")
 
 def encrypt():
-    """"""
+    """ Encrypts user inputed text using base64 and displays it in a new window """
 
     password = user_pass.get()
     # checks password is correct
@@ -91,7 +121,7 @@ Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, comma
 
 # displays DECRYPT button
 # 1. button calls decrypt function on click
-Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, command="").place(x=200, y=280)
+Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, command=decrypt).place(x=200, y=280)
 
 # displays RESET button
 # 1. button calls reset function on click
