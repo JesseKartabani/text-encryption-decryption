@@ -28,7 +28,7 @@ label1 = ttk.Label(root, text="Enter secret key for encryption and decryption")
 label1.config(font=("calibri",12))
 label1.place(x=10, y=200)
 
-# widget allows user to input their text
+# widget allows user to input their password
 user_pass = tk.Entry (root)
 user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
 user_pass.pack(pady=10)
