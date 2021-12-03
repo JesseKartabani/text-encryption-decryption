@@ -1,6 +1,7 @@
 # A simple tkinter window
 import tkinter as tk
 from tkinter import ttk
+from tkinter.constants import GROOVE
 
 # -- Windows only configuration --
 try:
@@ -29,7 +30,7 @@ label1.place(x=10, y=200)
 
 # widget allows user to input their text
 user_text = tk.Entry (root)
-user_text.config()
+user_text.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
 user_text.pack(pady=10)
 
 root.mainloop()
