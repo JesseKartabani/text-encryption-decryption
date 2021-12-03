@@ -17,11 +17,12 @@ root.geometry("400x400")
 # set window title
 root.title("Title Here")
 
-# static label
+# static label that tells user to input text
 label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
 label.config(font=("calbri",13), foreground="black",)
 label.pack()
 
+# static label that asks for users password
 label1 = ttk.Label(root, text="Enter secret key for encryption and decryption")
 label1.config(font=("calibri",12))
 label1.pack()
