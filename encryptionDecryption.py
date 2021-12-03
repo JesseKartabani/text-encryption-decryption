@@ -11,6 +11,17 @@ except:
     pass
 # -- End Windows only configuration --
 
+def decrypt():
+    """"""
+    return None
+
+def encrypt():
+    """"""
+    return None
+
+def reset():
+    """"""
+    return None
 
 root = tk.Tk()
 # set window size
