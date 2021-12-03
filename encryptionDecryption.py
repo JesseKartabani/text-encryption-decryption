@@ -24,6 +24,7 @@ label.pack()
 
 # widget allows user to input text
 user_entry = tk.Entry (root)
+user_entry.config()
 user_entry.pack(pady=10)
 
 root.mainloop()
