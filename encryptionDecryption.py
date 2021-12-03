@@ -46,5 +46,9 @@ Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, comma
 # 1. button calls decrypt function on click
 Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, command="").place(x=200, y=280)
 
+# displays RESET button
+# 1. button calls reset function on click
+Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command="").place(x=0, y=325)
+
 
 root.mainloop()
