@@ -12,7 +12,9 @@ except:
 
 
 root = tk.Tk()
+# set window size
 root.geometry("375x398")
+# set window title
 root.title("Title Here")
 
 label = ttk.Label(root, padding=10, text="Tkinter Window")
