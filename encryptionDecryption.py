@@ -1,6 +1,6 @@
 # A simple tkinter window
 import tkinter as tk
-from tkinter import Button, ttk
+from tkinter import Button, Text, ttk
 from tkinter.constants import GROOVE, WORD
 
 # -- Windows only configuration --
@@ -20,8 +20,11 @@ def encrypt():
     return None
 
 def reset():
-    """"""
-    return None
+    """ Removes all user inputed text """
+
+    user_text.delete("1.0", "end")
+
+    
 
 root = tk.Tk()
 # set window size
@@ -59,7 +62,7 @@ Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, comma
 
 # displays RESET button
 # 1. button calls reset function on click
-Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command="").place(x=-15, y=330)
+Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command=reset).place(x=-15, y=330)
 
 
 root.mainloop()
