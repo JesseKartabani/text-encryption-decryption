@@ -133,15 +133,21 @@ user_text.place(x=24, y=50, width=355, height=100)
 
 # displays ENCRYPT button
 # 1. button calls encrypt function on click
-Button(text="ENCRYPT", height=2, width=18, bg="#ed3833", fg="white", bd=0, command=encrypt).place(x=25, y=280)
+encrypt_button = Button(text="ENCRYPT")
+encrypt_button.config(height=2, width=18, bg="#ed3833", fg="white", bd=0, command=encrypt)
+encrypt_button.place(x=25, y=280)
 
 # displays DECRYPT button
 # 1. button calls decrypt function on click
-Button(text="DECRYPT", height=2, width=18, bg="#00bd56", fg="white", bd=0, command=decrypt).place(x=200, y=280)
+decrypt_button = Button(text="DECRYPT")
+decrypt_button.config(height=2, width=18, bg="#00bd56", fg="white", bd=0, command=decrypt)
+decrypt_button.place(x=200, y=280)
 
 # displays RESET button
 # 1. button calls reset function on click
-Button(text="RESET", height=2, width=50, bg="#1089ff", fg="white", bd=0, command=reset).place(x=-15, y=330)
+reset_button = Button(text="RESET")
+reset_button.config(height=2, width=50, bg="#1089ff", fg="white", bd=0, command=reset)
+reset_button.place(x=-15, y=330)
 
 # displays a copy to clipboard button
 # 1. button calls copy function on click
