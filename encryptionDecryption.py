@@ -112,8 +112,8 @@ root.maxsize(400, 400)
 root.title("Ciphertext")
 
 # static label that tells user to input text
-label = ttk.Label(root, padding=10, text="Enter text for encryption and decryption")
-label.config(font=("calbri", 13), foreground="black")
+label = ttk.Label(root, text="Enter text for encryption and decryption")
+label.config(font=("calbri", 13), padding=10, foreground="black")
 label.pack()
 
 # static label that asks for users password
