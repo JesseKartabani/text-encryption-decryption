@@ -74,7 +74,9 @@ def encrypt():
         encrypt = base64_bytes.decode("ascii")
 
         # displays ENCRYTED in the top left
-        Label(root1, text="ENCRYPTED", font="arial", fg="white", bg="#ed3833").place(x=10, y=0)
+        encrypted_label = Label(root1, text="ENCRYPTED")
+        encrypted_label.config(font="arial", fg="white", bg="#ed3833")
+        encrypted_label.place(x=10, y=0)
 
         # displays empty text box
         text1 = Text(root1, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
