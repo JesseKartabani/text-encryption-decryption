@@ -39,7 +39,8 @@ def decrypt():
         decrypted_label.place(x=10, y=0)
 
         # displays empty text box
-        text1 = Text(root2, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
+        text1 = Text(root2)
+        text1.config(font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
         text1.place(x=10, y=40, width=380, height=150)
 
         # displays the actual decrytped text
@@ -79,7 +80,8 @@ def encrypt():
         encrypted_label.place(x=10, y=0)
 
         # displays empty text box
-        text1 = Text(root1, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
+        text1 = Text(root1)
+        text1.config(font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
         text1.place(x=10, y=40, width=380, height=150)
 
         # displays the actual encrytped text
