@@ -34,7 +34,9 @@ def decrypt():
         decrypt = base64_bytes.decode("ascii")
 
         # displays DECRYTED in the top left
-        Label(root2, text="DECRYPTED", font="arial", fg="white", bg="#00bd56").place(x=10, y=0)
+        decrypted_label = Label(root2, text="DECRYPTED")
+        decrypted_label.config(font="arial", fg="white", bg="#00bd56")
+        decrypted_label.place(x=10, y=0)
 
         # displays empty text box
         text1 = Text(root2, font="Rpbote 10", bg="white", relief=GROOVE, wrap=WORD, bd=0)
