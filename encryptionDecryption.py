@@ -106,58 +106,60 @@ def copy():
     # TODO
 
 
-# MAIN SCREEN
-root = tk.Tk()
-# set window size
-root.geometry("400x400")
-# set minimum window size value
-root.minsize(400, 400)
-# set maximum window size value
-root.maxsize(400, 400)
-# set window title
-root.title("Ciphertext")
+if __name__ == "__main__":
 
-# static label that tells user to input text
-label = ttk.Label(root, text="Enter text for encryption and decryption")
-label.config(font=("calbri", 13), padding=10, foreground="black")
-label.pack()
+    # MAIN SCREEN
+    root = tk.Tk()
+    # set window size
+    root.geometry("400x400")
+    # set minimum window size value
+    root.minsize(400, 400)
+    # set maximum window size value
+    root.maxsize(400, 400)
+    # set window title
+    root.title("Ciphertext")
 
-# static label that asks for users password
-label1 = ttk.Label(root, text="Enter secret key for encryption and decryption")
-label1.config(font=("calibri", 12))
-label1.place(x=10, y=200)
+    # static label that tells user to input text
+    label = ttk.Label(root, text="Enter text for encryption and decryption")
+    label.config(font=("calbri", 13), padding=10, foreground="black")
+    label.pack()
 
-# widget allows user to input their password
-user_pass = tk.Entry(root)
-user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
-user_pass.place(x=28, y=225)
+    # static label that asks for users password
+    label1 = ttk.Label(root, text="Enter secret key for encryption and decryption")
+    label1.config(font=("calibri", 12))
+    label1.place(x=10, y=200)
 
-# widget allows user to input their text
-user_text = tk.Text(root, wrap=WORD)
-user_text.config(font="calibri 13", background="white", relief=GROOVE, bd=0)
-user_text.place(x=24, y=50, width=355, height=100)
+    # widget allows user to input their password
+    user_pass = tk.Entry(root)
+    user_pass.config(font="Robote 20", background="white", relief=GROOVE, bd=0, show="*")
+    user_pass.place(x=28, y=225)
 
-# displays ENCRYPT button
-# 1. button calls encrypt function on click
-encrypt_button = Button(text="ENCRYPT", command=encrypt)
-encrypt_button.config(height=2, width=18, bg="#ed3833", fg="white", bd=0)
-encrypt_button.place(x=25, y=280)
+    # widget allows user to input their text
+    user_text = tk.Text(root, wrap=WORD)
+    user_text.config(font="calibri 13", background="white", relief=GROOVE, bd=0)
+    user_text.place(x=24, y=50, width=355, height=100)
 
-# displays DECRYPT button
-# 1. button calls decrypt function on click
-decrypt_button = Button(text="DECRYPT", command=decrypt)
-decrypt_button.config(height=2, width=18, bg="#00bd56", fg="white", bd=0)
-decrypt_button.place(x=200, y=280)
+    # displays ENCRYPT button
+    # 1. button calls encrypt function on click
+    encrypt_button = Button(text="ENCRYPT", command=encrypt)
+    encrypt_button.config(height=2, width=18, bg="#ed3833", fg="white", bd=0)
+    encrypt_button.place(x=25, y=280)
 
-# displays RESET button
-# 1. button calls reset function on click
-reset_button = Button(text="RESET", command=reset)
-reset_button.config(height=2, width=50, bg="#1089ff", fg="white", bd=0)
-reset_button.place(x=-15, y=330)
+    # displays DECRYPT button
+    # 1. button calls decrypt function on click
+    decrypt_button = Button(text="DECRYPT", command=decrypt)
+    decrypt_button.config(height=2, width=18, bg="#00bd56", fg="white", bd=0)
+    decrypt_button.place(x=200, y=280)
 
-# displays a copy to clipboard button
-# 1. button calls copy function on click
+    # displays RESET button
+    # 1. button calls reset function on click
+    reset_button = Button(text="RESET", command=reset)
+    reset_button.config(height=2, width=50, bg="#1089ff", fg="white", bd=0)
+    reset_button.place(x=-15, y=330)
 
-# TODO
+    # displays a copy to clipboard button
+    # 1. button calls copy function on click
 
-root.mainloop()
+    # TODO
+
+    root.mainloop()
