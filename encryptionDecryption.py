@@ -103,7 +103,11 @@ def reset():
 
 def copy():
     """ Copys inputed text to clipboard when copy button is clicked """
-    # TODO
+
+    message = user_text.get(1.0, "end")
+
+    root.clipboard_clear()
+    root.clipboard_append(message)
 
 
 if __name__ == "__main__":
@@ -159,7 +163,8 @@ if __name__ == "__main__":
 
     # displays a copy to clipboard button
     # 1. button calls copy function on click
-
-    # TODO
+    copy_button = Button(text="COPY", command=copy)
+    copy_button.config(bg="#1089ff", fg="white", bd=0)
+    copy_button.place(x=25, y=150)
 
     root.mainloop()
